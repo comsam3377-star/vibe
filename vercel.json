@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/자기소개.html" }
+  ],
+  "cleanUrls": true
+}
