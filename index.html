@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="작게 시작해 분명한 변화를 만드는 스튜디오" />
+    <title>작은 시작, 분명한 변화</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17211b;
+        --muted: #66736a;
+        --paper: #f7f8f3;
+        --card: #ffffff;
+        --accent: #b8e986;
+        --line: #dfe6dc;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .wrap {
+        width: min(1080px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 0;
+      }
+
+      .logo { font-size: 18px; font-weight: 800; letter-spacing: -0.04em; }
+      .nav-link { color: var(--muted); font-size: 14px; }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 64px;
+        min-height: calc(100vh - 90px);
+        padding: 70px 0 110px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 22px;
+        padding: 7px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        background: rgba(255,255,255,.65);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      h1 {
+        max-width: 620px;
+        margin: 0;
+        font-size: clamp(48px, 7vw, 86px);
+        line-height: .98;
+        letter-spacing: -0.08em;
+      }
+
+      h1 span { color: #7cae56; }
+
+      .intro {
+        max-width: 420px;
+        margin: 28px 0 34px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+        letter-spacing: -0.03em;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 20px;
+        border-radius: 12px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        transition: transform .2s ease, background .2s ease;
+      }
+
+      .button:hover { transform: translateY(-3px); background: #344438; }
+
+      .visual {
+        position: relative;
+        min-height: 390px;
+        border-radius: 28px;
+        overflow: hidden;
+        background: #d9efbf;
+      }
+
+      .visual::before {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        right: -50px;
+        top: -35px;
+        border-radius: 50%;
+        background: #fff8d6;
+        content: "";
+      }
+
+      .visual::after {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        left: -42px;
+        bottom: -35px;
+        border-radius: 50%;
+        background: #a8d878;
+        content: "";
+      }
+
+      .message {
+        position: absolute;
+        z-index: 1;
+        right: 28px;
+        bottom: 28px;
+        left: 28px;
+        padding: 22px;
+        border: 1px solid rgba(23,33,27,.1);
+        border-radius: 18px;
+        background: rgba(255,255,255,.78);
+        backdrop-filter: blur(10px);
+      }
+
+      .message strong { display: block; margin-bottom: 8px; font-size: 22px; letter-spacing: -0.06em; }
+      .message p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+      footer {
+        padding: 24px 0 34px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 720px) {
+        .wrap { width: min(100% - 32px, 560px); }
+        nav { padding: 22px 0; }
+        .hero { display: block; min-height: auto; padding: 70px 0 80px; }
+        .visual { min-height: 300px; margin-top: 58px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <a class="logo" href="/">MORI</a>
+        <a class="nav-link" href="mailto:hello@mori.studio">hello@mori.studio ↗</a>
+      </nav>
+
+      <main class="hero">
+        <section>
+          <div class="eyebrow">작은 스튜디오 · 큰 아이디어</div>
+          <h1>작은 시작이<br /><span>변화를 만듭니다.</span></h1>
+          <p class="intro">
+            우리는 브랜드와 제품을 더 선명하게 만드는 작은 팀입니다.<br />
+            복잡한 것을 덜어내고, 꼭 필요한 것에 집중합니다.
+          </p>
+          <a class="button" href="mailto:hello@mori.studio">함께 시작하기 <span>→</span></a>
+        </section>
+
+        <section class="visual" aria-label="MORI 스튜디오 소개">
+          <div class="message">
+            <strong>Make it matter.</strong>
+            <p>의미 있는 아이디어를<br />오래 남는 경험으로 만듭니다.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>© 2026 MORI Studio. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
