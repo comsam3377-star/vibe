@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>연락처 - 퍼스널브랜드</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#543d37",
+                        "secondary-fixed": "#f3dfcb",
+                        "inverse-surface": "#31302d",
+                        "on-secondary-fixed": "#231a0e",
+                        "tertiary-container": "#6d544d",
+                        "primary-fixed-dim": "#ffb4a3",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1c1c19",
+                        "on-tertiary-fixed-variant": "#59413b",
+                        "surface-container": "#f1ede8",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad2",
+                        "outline": "#87726e",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#f3dfcb",
+                        "surface-tint": "#944936",
+                        "on-tertiary-container": "#eccac1",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary": "#6a5c4c",
+                        "secondary-fixed-dim": "#d6c4b0",
+                        "primary": "#702e1d",
+                        "primary-container": "#8e4432",
+                        "surface-container-highest": "#e6e2dd",
+                        "surface-bright": "#fdf9f4",
+                        "outline-variant": "#dac1bc",
+                        "surface-variant": "#e6e2dd",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#ddd9d5",
+                        "surface-container-low": "#f7f3ee",
+                        "error-container": "#ffdad6",
+                        "surface": "#fdf9f4",
+                        "tertiary-fixed": "#fedbd2",
+                        "background": "#fdf9f4",
+                        "inverse-primary": "#ffb4a3",
+                        "tertiary-fixed-dim": "#e0bfb7",
+                        "on-primary-fixed": "#3c0700",
+                        "on-primary-container": "#ffc3b5",
+                        "inverse-on-surface": "#f4f0eb",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#763221",
+                        "on-secondary-container": "#706252",
+                        "on-tertiary-fixed": "#291712",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "on-secondary-fixed-variant": "#514536",
+                        "on-surface-variant": "#54433f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-md": "32px",
+                        "stack-lg": "80px",
+                        "container-max": "1200px",
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["\"Source Serif 4\""],
+                        "body-md": ["\"Source Serif 4\""],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "caption": ["\"Source Serif 4\""],
+                        "display": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar (Web) -->
+<header class="hidden md:flex bg-surface shadow-sm docked full-width top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<span class="font-headline-md text-headline-md font-semibold text-primary">퍼스널브랜드</span>
+</div>
+<nav class="flex gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">홈</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">소개</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">포트폴리오</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary py-1 active:scale-95 transition-transform duration-200" href="#">연락처</a>
+</nav>
+<button class="font-label-md text-label-md text-primary px-4 py-2 hover:bg-secondary-container rounded-lg transition-colors">문의하기</button>
+</div>
+</header>
+<!-- TopAppBar (Mobile) -->
+<header class="flex md:hidden bg-surface shadow-sm docked full-width top-0 z-50">
+<div class="flex justify-between items-center px-margin-mobile h-16 w-full mx-auto">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+<span class="font-headline-md text-headline-md font-semibold text-primary">퍼스널브랜드</span>
+<button class="font-label-md text-label-md text-primary hover:bg-secondary-container p-2 rounded-lg transition-colors">문의하기</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-8 pb-stack-lg px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto md:mb-0 mb-24">
+<!-- Hero Section -->
+<section class="text-center mb-stack-lg mt-stack-md md:mt-stack-lg">
+<h1 class="font-headline-lg-mobile md:font-display text-headline-lg-mobile md:text-display text-on-surface mb-stack-sm">함께 멋진 작업을 시작해볼까요?</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">현재 새로운 프로젝트와 협업 제안을 받고 있습니다.</p>
+</section>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md lg:gap-stack-lg">
+<!-- Contact Info Panel (Glassmorphism/Soft Card) -->
+<div class="bg-surface-container rounded-xl p-stack-md shadow-[0_8px_30px_rgba(142,68,50,0.05)] flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Direct Contact</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">이메일을 보내주시거나 아래 양식을 통해 메시지를 남겨주시면 빠르게 답변해 드리겠습니다.</p>
+<div class="flex items-center gap-unit mb-unit">
+<span class="material-symbols-outlined text-primary fill">mail</span>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="mailto:hello@personalbrand.com">hello@personalbrand.com</a>
+</div>
+<div class="flex items-center gap-unit mb-stack-md">
+<span class="material-symbols-outlined text-primary fill">location_on</span>
+<span class="font-label-md text-label-md text-on-surface">서울시 강남구 테헤란로</span>
+</div>
+</div>
+<div class="mt-stack-md">
+<h3 class="font-label-md text-label-md text-on-surface-variant mb-unit">Follow Me</h3>
+<div class="flex gap-4">
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a aria-label="Github" class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">code</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface rounded-xl p-stack-md border border-outline-variant shadow-sm">
+<form class="space-y-gutter">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit" for="name">성함</label>
+<input class="w-full bg-surface-container border-b-2 border-transparent focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md text-body-md text-on-surface transition-colors" id="name" name="name" placeholder="홍길동" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit" for="email">이메일</label>
+<input class="w-full bg-surface-container border-b-2 border-transparent focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md text-body-md text-on-surface transition-colors" id="email" name="email" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-unit" for="message">메시지</label>
+<textarea class="w-full bg-surface-container border-b-2 border-transparent focus:border-primary focus:ring-0 rounded-t-lg px-4 py-3 font-body-md text-body-md text-on-surface transition-colors resize-none" id="message" name="message" placeholder="프로젝트에 대해 간략히 설명해주세요." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95 shadow-md flex justify-center items-center gap-2" type="submit">
+                        메시지 보내기
+                        <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface-container shadow-[0_-4px_10px_rgba(142,68,50,0.05)] docked full-width bottom-0 rounded-t-xl fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-secondary-container p-2 rounded-lg transition-all active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-md text-[10px] mt-1">홈</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-secondary-container p-2 rounded-lg transition-all active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label-md text-[10px] mt-1">소개</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-secondary-container p-2 rounded-lg transition-all active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined text-[24px]">work_history</span>
+<span class="font-label-md text-[10px] mt-1">포트폴리오</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 hover:bg-secondary-container transition-all active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined fill text-[24px]">mail</span>
+<span class="font-label-md text-[10px] mt-1">연락처</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-container-low full-width mt-auto hidden md:block">
+<div class="flex flex-col md:flex-row justify-between items-center py-stack-md px-margin-desktop w-full max-w-container-max mx-auto">
+<p class="font-body-md text-body-md text-secondary">© 2024 퍼스널브랜드. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="font-label-md text-label-md text-secondary hover:text-primary underline decoration-2 transition-all opacity-80 hover:opacity-100" href="#">인스타그램</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary underline decoration-2 transition-all opacity-80 hover:opacity-100" href="#">링크드인</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary underline decoration-2 transition-all opacity-80 hover:opacity-100" href="#">깃허브</a>
+</div>
+</div>
+</footer>
+</body></html>
